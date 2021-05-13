@@ -1,18 +1,7 @@
-import * as React from 'react';
-import {
-  Text,
-  StyleSheet,
-  View,
-  Image,
-  Button,
-  TouchableHighlight,
-} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import SignUpScreen from './src/screens/SignUpScreen';
-import LogInScreen from './src/screens/LogInScreen';
-import Header from './src/components/Header';
-import {RunningPeople} from './assets/RunningPeople.png';
+import React, {Component} from 'react';
+import {Text, StyleSheet, View, Image, Button} from 'react-native';
+import Header from '../components/Header';
+// import Navbar from '../components/Navbar';
 
 function HomeScreen({navigation}) {
   return (
@@ -40,20 +29,6 @@ function HomeScreen({navigation}) {
         onPress={() => navigation.navigate('Login')}
       />
     </View>
-  );
-}
-
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="LogIn" component={LogInScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
   );
 }
 
@@ -90,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+// export default HomeScreen;
