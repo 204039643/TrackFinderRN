@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Text, StyleSheet, View, Image, Button} from 'react-native';
 import Header from '../components/Header';
 // import Navbar from '../components/Navbar';
 
-const HomeScreen = () => {
+function HomeScreen({navigation}) {
   return (
     <View>
-      <Header />
+      {/* <Header /> */}
       <Image
         style={styles.image}
         source={{
@@ -17,17 +17,27 @@ const HomeScreen = () => {
       <Text style={styles.text}>
         Need help finding a track? We can help! To get started,
       </Text>
-      /{' '}
-      <Button title="Sign Up!" onPress={() => navigation.navigate('SignUp')} />
-      {/* <Navbar /> */}
+      <Button
+        style={styles.button}
+        title="Sign Up!"
+        onPress={() => navigation.navigate('SignUp')}
+      />
+      <Text style={styles.or}>~OR~</Text>
+      <Button
+        style={styles.button}
+        title="Log In!"
+        onPress={() => navigation.navigate('Login')}
+      />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 40,
+    fontSize: 50,
     padding: 40,
+    textAlign: 'center',
+    fontFamily: 'Cochin',
   },
   link: {
     color: '#28b5b5',
@@ -36,10 +46,23 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   image: {
+    marginTop: 10,
     height: 80,
     alignItems: 'center',
     padding: 20,
   },
+  or: {
+    textAlign: 'center',
+    fontSize: 20,
+    margin: 10,
+    fontFamily: 'Cochin',
+  },
+  button: {
+    borderColor: 'black',
+    borderWidth: 10,
+    backgroundColor: 'blue',
+    margin: 10,
+  },
 });
 
-export default HomeScreen;
+// export default HomeScreen;
