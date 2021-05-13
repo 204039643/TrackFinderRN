@@ -1,9 +1,7 @@
 import React from 'react'
 import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native'
-import StateDropDownMenu from '../components/StateDropDownMenu.js'
-let errorMessages = ''
 
-const SignUpScreen = ({navigation, route}) => {
+const LogInScreen = ({navigation, route}) => {
   //   console.log(route)
   //   const { screenNumber } = route.params
 
@@ -16,7 +14,7 @@ const SignUpScreen = ({navigation, route}) => {
           fontSize: 30,
           marginBottom: 80,
         }}>
-        WELCOME TO TRACK FINDER 2.0! PLEASE CREATE AN ACCOUNT.
+        WELCOME TO TRACK FINDER 2.0! PLEASE LOGIN.
       </Text>
       <Text style={{fontSize: 20}}>User Name</Text>
       <TextInput
@@ -47,19 +45,6 @@ const SignUpScreen = ({navigation, route}) => {
         }}
         placeholder='Pa$$Wurd'
       />
-      <Text style={{fontSize: 20}}>Home City</Text>
-      <TextInput
-        required='true'
-        textContentType='addressCity'
-        style={{
-          fontSize: 20,
-          margin: 10,
-          backgroundColor: 'white',
-          width: 150,
-        }}
-        placeholder='Where do I live?'
-      />
-      <StateDropDownMenu />
       <Button
         title='SUBMIT'
         onPress={() => {
@@ -79,4 +64,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default SignUpScreen
+export default LogInScreen
