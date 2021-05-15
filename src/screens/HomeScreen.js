@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import * as React from 'react'
 import {Text, StyleSheet, View, Image, Button} from 'react-native'
-import Header from '../components/Header'
-
-// import Navbar from '../components/Navbar';
+// import {NavigationContainer} from '@react-navigation/native';
+// import {createStackNavigator} from '@react-navigation/stack';
+// import NavBarIOSLight from './src/components/Navbar';
 
 function HomeScreen ({navigation}) {
   return (
@@ -32,7 +32,6 @@ function HomeScreen ({navigation}) {
     </View>
   )
 }
-
 const styles = StyleSheet.create({
   text: {
     fontSize: 50,
@@ -66,4 +65,4 @@ const styles = StyleSheet.create({
   },
 })
 
-// export default HomeScreen;
+export default HomeScreen
