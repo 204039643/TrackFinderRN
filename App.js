@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   Text,
   StyleSheet,
@@ -6,15 +6,15 @@ import {
   Image,
   Button,
   TouchableHighlight,
-} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import SignUpScreen from './src/screens/SignUpScreen';
-import LogInScreen from './src/screens/LogInScreen';
-import Header from './src/components/Header';
-import {RunningPeople} from './assets/RunningPeople.png';
+} from 'react-native'
+import {NavigationContainer} from '@react-navigation/native'
+import {createStackNavigator} from '@react-navigation/stack'
+import SignUpScreen from './src/screens/SignUpScreen'
+import LogInScreen from './src/screens/LogInScreen'
+import Header from './src/components/Header'
+import {RunningPeople} from './assets/RunningPeople.png'
 
-function HomeScreen({navigation}) {
+function HomeScreen ({navigation}) {
   return (
     <View>
       {/* <Header /> */}
@@ -30,31 +30,31 @@ function HomeScreen({navigation}) {
       </Text>
       <Button
         style={styles.button}
-        title="Sign Up!"
+        title='Sign Up!'
         onPress={() => navigation.navigate('SignUp')}
       />
       <Text style={styles.or}>~OR~</Text>
       <Button
         style={styles.button}
-        title="Log In!"
-        onPress={() => navigation.navigate('Login')}
+        title='Log In!'
+        onPress={() => navigation.navigate('LogIn')}
       />
     </View>
-  );
+  )
 }
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator()
 
-function App() {
+function App () {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="LogIn" component={LogInScreen} />
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name='Home' component={HomeScreen} />
+        <Stack.Screen name='LogIn' component={LogInScreen} />
+        <Stack.Screen name='SignUp' component={SignUpScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     margin: 10,
   },
-});
+})
 
-export default App;
+export default App
