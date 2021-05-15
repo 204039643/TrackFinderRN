@@ -1,5 +1,6 @@
-import React from 'react'
-import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native'
+import React from 'react';
+import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native';
+import Navbar from '../components/Navbar';
 
 const LogInScreen = ({navigation, route}) => {
   //   console.log(route)
@@ -18,42 +19,43 @@ const LogInScreen = ({navigation, route}) => {
       </Text>
       <Text style={{fontSize: 20}}>User Name</Text>
       <TextInput
-        required='true'
-        textContentType='username'
-        autoCompleteType='username'
-        autoCapitalize='none'
+        required="true"
+        textContentType="username"
+        autoCompleteType="username"
+        autoCapitalize="none"
         style={{
           fontSize: 20,
           margin: 10,
           backgroundColor: 'white',
           width: 150,
         }}
-        placeholder='UsainBolt1000'
+        placeholder="UsainBolt1000"
       />
       <Text style={{fontSize: 20}}>Password</Text>
       <TextInput
-        required='true'
-        textContentType='password'
-        autoCompleteType='password'
-        autoCapitalize='none'
-        secureTextEntry='true'
+        required="true"
+        textContentType="password"
+        autoCompleteType="password"
+        autoCapitalize="none"
+        secureTextEntry="true"
         style={{
           fontSize: 20,
           margin: 10,
           backgroundColor: 'white',
           width: 150,
         }}
-        placeholder='Pa$$Wurd'
+        placeholder="Pa$$Wurd"
       />
       <Button
-        title='SUBMIT'
+        title="SUBMIT"
         onPress={() => {
-          Alert.alert('Submit Button Pressed!')
+          Alert.alert('Submit Button Pressed!');
         }}
       />
+      <Navbar />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   mainView: {
@@ -62,6 +64,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgb(206, 234, 234)',
   },
-})
+});
 
-export default LogInScreen
+export default LogInScreen;
