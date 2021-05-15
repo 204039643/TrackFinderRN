@@ -27,7 +27,7 @@ function HomeScreen ({navigation}) {
       <Button
         style={styles.button}
         title='Log In!'
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('LogIn')}
       />
     </View>
   )
