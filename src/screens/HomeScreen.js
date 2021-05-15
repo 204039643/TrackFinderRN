@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
-import {Text, StyleSheet, View, Image, Button} from 'react-native';
-import Header from '../components/Header';
+import React, {Component} from 'react'
+import {Text, StyleSheet, View, Image, Button} from 'react-native'
+import Header from '../components/Header'
+
 // import Navbar from '../components/Navbar';
 
-function HomeScreen({navigation}) {
+function HomeScreen ({navigation}) {
   return (
     <View>
       {/* <Header /> */}
@@ -19,17 +20,17 @@ function HomeScreen({navigation}) {
       </Text>
       <Button
         style={styles.button}
-        title="Sign Up!"
+        title='Sign Up!'
         onPress={() => navigation.navigate('SignUp')}
       />
       <Text style={styles.or}>~OR~</Text>
       <Button
         style={styles.button}
-        title="Log In!"
+        title='Log In!'
         onPress={() => navigation.navigate('Login')}
       />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -63,6 +64,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     margin: 10,
   },
-});
+})
 
 // export default HomeScreen;
