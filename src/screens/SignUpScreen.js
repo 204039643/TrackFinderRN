@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import StateDropDownMenu from '../components/StateDropDownMenu.js';
 let errorMessages = '';
+import Navbar from '../components/Navbar';
 
 const SignUpScreen = ({navigation, route}) => {
   //   console.log(route)
@@ -66,6 +67,7 @@ const SignUpScreen = ({navigation, route}) => {
           Alert.alert('Submit Button Pressed!');
         }}
       />
+      <Navbar />
     </View>
   );
 };

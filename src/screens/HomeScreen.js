@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Text, StyleSheet, View, Image, Button} from 'react-native';
 // import {NavigationContainer} from '@react-navigation/native';
 // import {createStackNavigator} from '@react-navigation/stack';
-// import NavBarIOSLight from './src/components/Navbar';
+import Navbar from '../components/Navbar';
 
 function HomeScreen({navigation}) {
   return (
@@ -27,8 +27,9 @@ function HomeScreen({navigation}) {
       <Button
         style={styles.button}
         title="Log In!"
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('LogIn')}
       />
+      <Navbar />
     </View>
   );
 }
