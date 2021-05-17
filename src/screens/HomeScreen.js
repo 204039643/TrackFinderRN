@@ -3,11 +3,12 @@ import {Text, StyleSheet, View, Image, Button} from 'react-native'
 // import {NavigationContainer} from '@react-navigation/native';
 // import {createStackNavigator} from '@react-navigation/stack';
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
 function HomeScreen ({navigation}) {
   return (
     <View>
-      {/* <Header /> */}
+      <Header />
       <Image
         style={styles.image}
         source={{

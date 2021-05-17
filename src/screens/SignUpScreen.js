@@ -3,6 +3,7 @@ import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import StateDropDownMenu from '../components/StateDropDownMenu.js';
 let errorMessages = '';
 import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 const SignUpScreen = ({navigation, route}) => {
   //   console.log(route)
@@ -10,6 +11,7 @@ const SignUpScreen = ({navigation, route}) => {
 
   return (
     <View style={styles.mainView}>
+      <Header />
       <Text
         style={{
           textAlign: 'center',
