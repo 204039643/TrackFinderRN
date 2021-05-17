@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 const LogInScreen = ({navigation, route}) => {
   //   console.log(route)
@@ -8,6 +9,7 @@ const LogInScreen = ({navigation, route}) => {
 
   return (
     <View style={styles.mainView}>
+      <Header />
       <Text
         style={{
           textAlign: 'center',
