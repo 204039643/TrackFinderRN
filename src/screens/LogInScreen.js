@@ -1,13 +1,23 @@
 import React from 'react';
-import {Button, View, Text, StyleSheet, TextInput, Alert} from 'react-native';
+import {
+  Button,
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
+// import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const LogInScreen = ({navigation, route}) => {
   //   console.log(route)
   //   const { screenNumber } = route.params
 
   return (
+    // <View>
     <View style={styles.mainView}>
       <Header />
       <Text
@@ -15,7 +25,10 @@ const LogInScreen = ({navigation, route}) => {
           textAlign: 'center',
           fontWeight: 'bold',
           fontSize: 30,
-          marginBottom: 80,
+          marginBottom: 45,
+          marginTop: 45,
+          padding: 20,
+          fontFamily: 'Cochin',
         }}>
         WELCOME TO TRACK FINDER 2.0! PLEASE LOGIN.
       </Text>
@@ -25,12 +38,7 @@ const LogInScreen = ({navigation, route}) => {
         textContentType="username"
         autoCompleteType="username"
         autoCapitalize="none"
-        style={{
-          fontSize: 20,
-          margin: 10,
-          backgroundColor: 'white',
-          width: 150,
-        }}
+        style={styles.textInput}
         placeholder="UsainBolt1000"
       />
       <Text style={{fontSize: 20}}>Password</Text>
@@ -40,20 +48,17 @@ const LogInScreen = ({navigation, route}) => {
         autoCompleteType="password"
         autoCapitalize="none"
         secureTextEntry="true"
-        style={{
-          fontSize: 20,
-          margin: 10,
-          backgroundColor: 'white',
-          width: 150,
-        }}
+        style={styles.textInput}
         placeholder="Pa$$Wurd"
       />
-      <Button
-        title="SUBMIT"
+      <TouchableOpacity
+        style={styles.subTo}
         onPress={() => {
           Alert.alert('Submit Button Pressed!');
-        }}
-      />
+        }}>
+        <Text style={styles.submit}>SUBMIT</Text>
+      </TouchableOpacity>
+
       <Navbar />
     </View>
   );
@@ -63,8 +68,19 @@ const styles = StyleSheet.create({
   mainView: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: 'rgb(206, 234, 234)',
+    padding: 10,
+    // fontFamily: 'Cochin',
+  },
+  textInput: {fontSize: 20, margin: 10, backgroundColor: 'white', width: 150},
+  subTo: {
+    marginBottom: 150,
+  },
+  submit: {
+    color: 'blue',
+    fontSize: 25,
+    padding: 20,
+    fontFamily: 'Cochin',
   },
 });
 

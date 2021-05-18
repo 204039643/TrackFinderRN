@@ -17,7 +17,7 @@ const SignUpScreen = ({navigation, route}) => {
           textAlign: 'center',
           fontWeight: 'bold',
           fontSize: 30,
-          marginBottom: 80,
+          marginBottom: 30,
         }}>
         WELCOME TO TRACK FINDER 2.0! PLEASE CREATE AN ACCOUNT.
       </Text>
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   mainView: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: 'rgb(206, 234, 234)',
   },
 });
