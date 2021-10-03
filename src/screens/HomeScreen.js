@@ -1,11 +1,11 @@
-import * as React from 'react';
-import {Text, StyleSheet, View, Image, Button} from 'react-native';
+import * as React from 'react'
+import {Text, StyleSheet, View, Image, Button} from 'react-native'
 // import {NavigationContainer} from '@react-navigation/native';
 // import {createStackNavigator} from '@react-navigation/stack';
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
-function HomeScreen({navigation}) {
+function HomeScreen ({navigation}) {
   return (
     <View>
       <Header />
@@ -21,18 +21,18 @@ function HomeScreen({navigation}) {
       </Text>
       <Button
         style={styles.button}
-        title="Sign Up!"
+        title='Sign Up!'
         onPress={() => navigation.navigate('SignUp')}
       />
       <Text style={styles.or}>~OR~</Text>
       <Button
         style={styles.button}
-        title="Log In!"
+        title='Log In!'
         onPress={() => navigation.navigate('LogIn')}
       />
       <Navbar />
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   text: {
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     margin: 10,
   },
-});
+})
 
-export default HomeScreen;
+export default HomeScreen
