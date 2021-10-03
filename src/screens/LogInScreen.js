@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Button,
   View,
@@ -7,9 +7,9 @@ import {
   TextInput,
   Alert,
   TouchableOpacity,
-} from 'react-native';
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+} from 'react-native'
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 // import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const LogInScreen = ({navigation, route}) => {
@@ -34,35 +34,35 @@ const LogInScreen = ({navigation, route}) => {
       </Text>
       <Text style={{fontSize: 20}}>User Name</Text>
       <TextInput
-        required="true"
-        textContentType="username"
-        autoCompleteType="username"
-        autoCapitalize="none"
+        required='true'
+        textContentType='username'
+        autoCompleteType='username'
+        autoCapitalize='none'
         style={styles.textInput}
-        placeholder="UsainBolt1000"
+        placeholder='UsainBolt1000'
       />
       <Text style={{fontSize: 20}}>Password</Text>
       <TextInput
-        required="true"
-        textContentType="password"
-        autoCompleteType="password"
-        autoCapitalize="none"
-        secureTextEntry="true"
+        required='true'
+        textContentType='password'
+        autoCompleteType='password'
+        autoCapitalize='none'
+        secureTextEntry='true'
         style={styles.textInput}
-        placeholder="Pa$$Wurd"
+        placeholder='Pa$$Wurd'
       />
       <TouchableOpacity
         style={styles.subTo}
         onPress={() => {
-          Alert.alert('Submit Button Pressed!');
+          Alert.alert('Submit Button Pressed!')
         }}>
         <Text style={styles.submit}>SUBMIT</Text>
       </TouchableOpacity>
 
       <Navbar />
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   mainView: {
@@ -82,6 +82,6 @@ const styles = StyleSheet.create({
     padding: 20,
     fontFamily: 'Cochin',
   },
-});
+})
 
-export default LogInScreen;
+export default LogInScreen

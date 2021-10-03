@@ -31,12 +31,13 @@ export function WelcomeScreen ({navigation}) {
   // The onPressSignUp method calls AuthProvider.signUp with the
   // email/password in state and then signs in.
   const onPressSignUp = async () => {
-    try {
-      await signUp(email, password)
-      signIn(email, password)
-    } catch (error) {
-      Alert.alert(`Failed to sign up: ${error.message}`)
-    }
+    navigation.navigate('SignUp')
+    // try {
+    //   await signUp(email, password)
+    //   signIn(email, password)
+    // } catch (error) {
+    //   Alert.alert(`Failed to sign up: ${error.message}`)
+    // }
   }
 
   return (

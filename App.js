@@ -17,9 +17,9 @@ function App () {
         <Stack.Navigator>
           <Stack.Screen name='Welcome' component={WelcomeScreen} />
           <Stack.Screen name='SearchTrack' component={SearchTrack} />
-          {/* <Stack.Screen name='Home' component={HomeScreen} />
-        <Stack.Screen name='LogIn' component={LogInScreen} />
-        <Stack.Screen name='SignUp' component={SignUpScreen} /> */}
+          <Stack.Screen name='Home' component={HomeScreen} />
+          <Stack.Screen name='LogIn' component={LogInScreen} />
+          <Stack.Screen name='SignUp' component={SignUpScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </AuthProvider>
