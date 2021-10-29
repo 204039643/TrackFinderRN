@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
   Button,
   View,
@@ -13,11 +13,25 @@ import Header from '../components/Header'
 // import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const LogInScreen = ({navigation, route}) => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
   //   console.log(route)
   //   const { screenNumber } = route.params
 
+  // const credentials = Realm.Credentials.emailPassword(
+  //   'atlsykes1@att.net',
+  //   'tftest',
+  // )
+  // try {
+  //   const user = await app.logIn(credentials)
+  //   console.log('Successfully logged in!', user.id)
+  //   return user
+  // } catch (err) {
+  //   console.error('Failed to log in', err.message)
+  // }
+
   return (
-    // <View>
     <View style={styles.mainView}>
       <Header />
       <Text
@@ -40,6 +54,8 @@ const LogInScreen = ({navigation, route}) => {
         autoCapitalize='none'
         style={styles.textInput}
         placeholder='UsainBolt1000'
+        value={email}
+        onChangeText={text => setEmail(text)}
       />
       <Text style={{fontSize: 20}}>Password</Text>
       <TextInput
@@ -50,15 +66,18 @@ const LogInScreen = ({navigation, route}) => {
         secureTextEntry='true'
         style={styles.textInput}
         placeholder='Pa$$Wurd'
+        value={password}
+        onChangeText={text => setPassword(text)}
       />
       <TouchableOpacity
         style={styles.subTo}
         onPress={() => {
           Alert.alert('Submit Button Pressed!')
+          console.log(`email:${email}`)
+          console.log(`password:${password}`)
         }}>
         <Text style={styles.submit}>SUBMIT</Text>
       </TouchableOpacity>
-
       <Navbar />
     </View>
   )

@@ -21,6 +21,8 @@ export function WelcomeScreen ({navigation}) {
   // email/password in state.
   const onPressSignIn = async () => {
     console.log('Press sign in')
+    console.log(`email: ${email}`)
+    console.log(`password: ${password}`)
     try {
       await signIn(email, password)
     } catch (error) {
@@ -55,9 +57,9 @@ export function WelcomeScreen ({navigation}) {
       </Text>
       <View style={styles.inputContainer}>
         <TextInput
-          onChangeText={setEmail}
+          onChangeText={text => setEmail(text)}
           value={email}
-          placeholder='email'
+          placeholder='usainbolt1000@gmail.com'
           style={styles.inputStyle}
           autoCapitalize='none'
         />
@@ -66,7 +68,7 @@ export function WelcomeScreen ({navigation}) {
         <TextInput
           onChangeText={text => setPassword(text)}
           value={password}
-          placeholder='password'
+          placeholder='PA$$W0RD'
           style={styles.inputStyle}
           secureTextEntry
         />
