@@ -1,12 +1,12 @@
-import React from 'react';
-import {Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import React from 'react'
+import {Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native'
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
 import {
   faStream,
   faSearch,
   faShoePrints,
-} from '@fortawesome/free-solid-svg-icons';
-import {faExpeditedssl} from '@fortawesome/free-brands-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
+import {faExpeditedssl} from '@fortawesome/free-brands-svg-icons'
 
 // type Props = {};
 const Navbar = () => {
@@ -22,8 +22,8 @@ const Navbar = () => {
         <FontAwesomeIcon icon={faSearch} size={40} style={styles.icon} />
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 const styles = StyleSheet.create({
   // text: {
   //   fontSize: 20,
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
     position: 'relative',
     bottom: 0,
   },
-});
+})
 
-export default Navbar;
+export default Navbar
