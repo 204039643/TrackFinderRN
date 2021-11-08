@@ -10,6 +10,7 @@ const Logout = () => {
   return (
     <Button
       title='Log Out'
+      color='red'
       onPress={() => {
         console.log('Press log out')
         Alert.alert('Log Out', null, [
@@ -18,7 +19,7 @@ const Logout = () => {
             style: 'destructive',
             onPress: () => {
               signOut()
-              navigation.popToTop()
+              // navigation.popToTop()
             },
           },
           {text: 'Cancel', style: 'cancel'},

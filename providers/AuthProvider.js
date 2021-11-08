@@ -65,10 +65,24 @@ const AuthProvider = ({children}) => {
 
   // The signIn function takes an email and password and uses the
   // emailPassword authentication provider to log in.
+  // const signIn = async (email, password) => {
+  //   const creds = Realm.Credentials.emailPassword(email, password)
+  //   const newUser = await app.logIn(creds)
+  //   console.log(`newUser returning as: ${JSON.stringify(newUser)}`)
+  //   setUser(newUser)
+  //   console.log(`Successfully logged in ${user}`)
+  // }
+  // Create an email/password credential
   const signIn = async (email, password) => {
-    const creds = Realm.Credentials.emailPassword(email, password)
-    const newUser = await app.logIn(creds)
-    setUser(newUser)
+    const credentials = Realm.Credentials.emailPassword(email, password)
+    try {
+      let user = await app.logIn(credentials)
+      console.log('Successfully logged in!', user.id)
+      alert('successfully logged in!')
+      return user
+    } catch (err) {
+      console.error('Failed to log in', err.message)
+    }
   }
 
   // The signUp function takes an email and password and uses the
@@ -80,13 +94,17 @@ const AuthProvider = ({children}) => {
   // The signOut function calls the logOut function on the currently
   // logged in user
   const signOut = () => {
-    if (user == null) {
-      console.warn("Not logged in, can't log out!")
-      return
-    }
-    user.logOut()
-    setUser(null)
+    console.log('current user', user.id)
+    // if (user == null) {
+    //   console.warn("Not logged in, can't log out!")
+    //   return
+    // }
+
+    // console.log(`Logging out ${user.id}`)
+    app.currentUser.logOut()
   }
+
+  // setUser(null)
 
   return (
     <AuthContext.Provider

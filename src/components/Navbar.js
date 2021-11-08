@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {faExpeditedssl} from '@fortawesome/free-brands-svg-icons'
 
-// type Props = {};
 const Navbar = () => {
   return (
     <View style={styles.view}>

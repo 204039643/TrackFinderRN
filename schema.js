@@ -3,7 +3,7 @@ import {ObjectId} from 'bson'
 class Track {
   /**
    *
-   * @param {string} name The name of the task
+   * @param {string} name The name of the track
    * @param {string status The status of the task. Default value is "Open"
    * @param {ObjectId} id The ObjectId to create this task with
    */
@@ -35,7 +35,7 @@ class Track {
       streetAddress: 'string',
       city: 'string',
       state: 'string',
-      zipCode: 'integer',
+      zipCode: 'int',
       availability: 'array',
     },
     primaryKey: '_id',
@@ -44,43 +44,43 @@ class Track {
 
 export {Track}
 
-// class User {
-//   /**
-//    *
-//    * @param {string} name The name of the task
-//    * @param {string status The status of the task. Default value is "Open"
-//    * @param {ObjectId} id The ObjectId to create this task with
-//    */
-//   constructor ({
-//     username,
-//     partition,
-//     password,
-//     email,
-//     homeCity,
-//     state,
-//     id = new ObjectId(),
-//   }) {
-//     this._partition = partition
-//     this._id = id
-//     this.username = username
-//     this.password = password
-//     this.email = email
-//     this.homeCity = homeCity
-//     this.state = state
-//   }
-//   static schema = {
-//     name: 'User',
-//     properties: {
-//       _id: 'objectId',
-//       _partition: 'string?',
-//       username: 'string',
-//       password: 'string',
-//       email: 'string',
-//       homeCity: 'string',
-//       state: 'string',
-//     },
-//     primaryKey: '_id',
-//   }
-// }
+class User {
+  /**
+   *
+   * @param {string} name The name of the task
+   * @param {string status The status of the task. Default value is "Open"
+   * @param {ObjectId} id The ObjectId to create this task with
+   */
+  constructor ({
+    username,
+    partition,
+    password,
+    email,
+    homeCity,
+    state,
+    id = new ObjectId(),
+  }) {
+    this._partition = partition
+    this._id = id
+    this.username = username
+    this.password = password
+    this.email = email
+    this.homeCity = homeCity
+    this.state = state
+  }
+  static schema = {
+    name: 'User',
+    properties: {
+      _id: 'objectId',
+      _partition: 'string?',
+      username: 'string',
+      password: 'string',
+      email: 'string',
+      homeCity: 'string',
+      state: 'string',
+    },
+    primaryKey: '_id',
+  }
+}
 
-// export {User}
+export {User}
