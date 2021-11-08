@@ -1,15 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { Picker } from '@react-native-picker/picker'
+import {View, Text} from 'react-native'
+import {Picker} from '@react-native-picker/picker'
 
 const StateDropDownMenu = () => {
   return (
     <View>
       <Text
         style={{
-          fontSize: 20
-        }}
-      >
+          fontSize: 20,
+        }}>
         Select U.S. State
       </Text>
       <Picker>

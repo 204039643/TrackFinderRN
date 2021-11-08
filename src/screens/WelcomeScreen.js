@@ -4,6 +4,7 @@ import {useAuth} from '../../providers/AuthProvider'
 import styles from '../../stylesheet'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
+import Logout from '../components/Logout'
 
 export function WelcomeScreen ({navigation}) {
   const [email, setEmail] = useState('')
@@ -25,6 +26,7 @@ export function WelcomeScreen ({navigation}) {
     console.log(`password: ${password}`)
     try {
       await signIn(email, password)
+      navigation.navigate('SearchTrack')
     } catch (error) {
       Alert.alert(`Failed to sign in: ${error.message}`)
     }
@@ -70,11 +72,12 @@ export function WelcomeScreen ({navigation}) {
           value={password}
           placeholder='PA$$W0RD'
           style={styles.inputStyle}
-          secureTextEntry
+          secureTextEntry={true}
         />
       </View>
       <Button onPress={onPressSignIn} title='Sign In' />
       <Button onPress={onPressSignUp} title='Sign Up' />
+      <Logout />
       <Navbar />
     </View>
   )

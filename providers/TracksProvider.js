@@ -1,6 +1,6 @@
 import React, {useContext, useState, useEffect, useRef} from 'react'
 import Realm from 'realm'
-import {Track} from '../schemas'
+import {Track} from '../schema'
 import {useAuth} from './AuthProvider'
 
 const TracksContext = React.createContext(null)

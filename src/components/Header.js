@@ -1,19 +1,19 @@
-import React from 'react';
-import {Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faEllipsisV} from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import {Text, StyleSheet, View, Button, TouchableOpacity} from 'react-native'
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
+import {faEllipsisV} from '@fortawesome/free-solid-svg-icons'
 
 // type Props = {};
 const Navbar = () => {
   return (
     <View style={styles.view}>
-      <Text style={styles.header}>TrackFinder 2.0</Text>
+      <Text style={styles.header}>TrackFinder RN</Text>
       <TouchableOpacity style={styles.menu}>
         <FontAwesomeIcon icon={faEllipsisV} size={10} style={styles.menu} />
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 const styles = StyleSheet.create({
   menu: {
     color: '#383838',
@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
     padding: 13,
     fontWeight: '500',
   },
-});
+})
 
-export default Navbar;
+export default Navbar
