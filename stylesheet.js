@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import {withOrientation} from 'react-navigation'
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -62,6 +63,20 @@ const styles = StyleSheet.create({
     borderWidth: 10,
     backgroundColor: 'blue',
     margin: 10,
+  },
+  unselected: {
+    backgroundColor: 'yellow',
+    margin: 5,
+    width: 140,
+    borderRadius: 10,
+    padding: 5,
+  },
+  selected: {
+    backgroundColor: 'lime',
+    margin: 6,
+    padding: 10,
+    width: 140,
+    borderRadius: 10,
   },
 })
 

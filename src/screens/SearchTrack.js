@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import StateDropDownMenu from '../components/StateDropDownMenu.js'
 
-function SearchTrack () {
+function SearchTrack ({navigation}) {
   return (
     <View style={styles.mainView}>
       <Header />
@@ -29,6 +29,12 @@ function SearchTrack () {
         title='SUBMIT'
         onPress={() => {
           Alert.alert('Submit Button Pressed!')
+        }}
+      />
+      <Button
+        title='ADD TRACK'
+        onPress={() => {
+          navigation.navigate('AddTrack')
         }}
       />
       <Button

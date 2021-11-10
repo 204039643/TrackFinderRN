@@ -7,6 +7,7 @@ import SignUpScreen from './src/screens/SignUpScreen'
 import {WelcomeScreen} from './src/screens/WelcomeScreen'
 import {AuthProvider} from './providers/AuthProvider'
 import SearchTrack from './src/screens/SearchTrack'
+import AddTrack from './src/screens/AddTrack'
 
 const Stack = createStackNavigator()
 
@@ -17,6 +18,7 @@ function App () {
         <Stack.Navigator>
           <Stack.Screen name='Welcome' component={WelcomeScreen} />
           <Stack.Screen name='SearchTrack' component={SearchTrack} />
+          <Stack.Screen name='AddTrack' component={AddTrack} />
           <Stack.Screen name='Home' component={HomeScreen} />
           <Stack.Screen name='LogIn' component={LogInScreen} />
           <Stack.Screen name='SignUp' component={SignUpScreen} />
