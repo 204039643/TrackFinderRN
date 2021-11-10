@@ -7,6 +7,7 @@ import {
   faShoePrints,
 } from '@fortawesome/free-solid-svg-icons'
 import {faExpeditedssl} from '@fortawesome/free-brands-svg-icons'
+import {NavigationContainer} from '@react-navigation/native'
 
 const Navbar = () => {
   return (
